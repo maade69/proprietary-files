@@ -25,7 +25,7 @@ jobs:
           unzip /home/runner/working/bin/aapt2.jar -d /home/runner/working/bin/
       
       - name: Run the script
-        run: ./run.sh
+        run: bash run.sh
 
              
  

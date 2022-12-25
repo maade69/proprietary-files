@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 devices=(flame coral sunfish redfin bramble barbet oriole raven panther cheetah)
 
 git clone https://github.com/GrapheneOS/{script,state} /home/runner/working/{script,state}
