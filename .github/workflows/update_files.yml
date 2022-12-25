@@ -20,7 +20,7 @@ jobs:
         run: |
           mkdir -p /work/bin
           git clone https://github.com/GrapheneOS/adevtool /work/adevtool
-          curl https://raw.githubusercontent.com/GrapheneOS/adevtool/596a0bd0c4108700892239368741f193207a6f88/scripts/append-sha256.py --output /work/adevtool/scripts/append-sha256.py
+          curl https://raw.githubusercontent.com/maade69/adevtool/13/scripts/append-sha256.py --output /work/adevtool/scripts/append-sha256.py
           curl https://dl.google.com/dl/android/maven2/com/android/tools/build/aapt2/7.3.1-8691043/aapt2-7.3.1-8691043-linux.jar --output /work/bin/aapt2.jar
           unzip /work/bin/aapt2.jar -d /work/bin/
              
