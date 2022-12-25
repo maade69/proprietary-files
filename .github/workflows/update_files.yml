@@ -18,6 +18,7 @@ jobs:
           
       - name: Prepare environment
         run: |
+          sudo apt install python3-pip python3-protobuf
           mkdir -p /home/runner/working/bin
           git clone https://github.com/GrapheneOS/adevtool /home/runner/working/adevtool
           curl https://raw.githubusercontent.com/maade69/adevtool/13/scripts/append-sha256.py --output /home/runner/working/adevtool/scripts/append-sha256.py
