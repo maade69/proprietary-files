@@ -1,4 +1,5 @@
 #!/bin/bash
+set -o errexit -o nounset -o pipefail
 devices=(flame coral sunfish redfin bramble barbet oriole raven panther cheetah)
 
 git clone https://github.com/GrapheneOS/script /home/runner/working/script
