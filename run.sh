@@ -8,6 +8,12 @@ source /home/runner/working/script/common.sh
 yarn install --cwd /home/runner/working/adevtool/
 mkdir /home/runner/working/vendor
 for device in ${devices[@]};do
+    # Use frozen tag for 4th generation releases
+    if [[ $device == flame ]] || [[ $device == coral ]];then
+        cd /home/runner/working/script
+        git checkout 13-coral
+        source /home/runner/working/script/common.sh
+    fi
     /home/runner/working/adevtool/bin/run download /home/runner/working/adevtool/dl/ -d $device -b $aosp_version -t factory ota
     sudo /home/runner/working/adevtool/bin/run generate-all /home/runner/working/adevtool/config/$device.yml -c /home/runner/working/state/$device.json -s /home/runner/working/adevtool/dl/$device-$aosp_version-*.zip --aapt2=/home/runner/working/bin/aapt2
     sudo chown -R runner:runner /home/runner/working/{google_devices,adevtool}
