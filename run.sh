@@ -6,6 +6,7 @@ git clone https://github.com/GrapheneOS/script /home/runner/working/script
 git clone https://github.com/GrapheneOS/vendor_state /home/runner/working/state
 source /home/runner/working/script/common.sh
 
+node -v
 yarn install --cwd /home/runner/working/adevtool/
 mkdir /home/runner/working/vendor
 for device in ${devices[@]};do

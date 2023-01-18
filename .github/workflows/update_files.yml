@@ -24,6 +24,7 @@ jobs:
           curl https://raw.githubusercontent.com/maade69/adevtool/13/scripts/append-sha256.py --output /home/runner/working/adevtool/scripts/append-sha256.py
           curl https://dl.google.com/dl/android/maven2/com/android/tools/build/aapt2/7.3.1-8691043/aapt2-7.3.1-8691043-linux.jar --output /home/runner/working/bin/aapt2.jar
           unzip /home/runner/working/bin/aapt2.jar -d /home/runner/working/bin/
+          node -v
       
       - name: Run the script
         run: bash run.sh
