@@ -35,7 +35,7 @@ for device in ${devices[@]};do
     sudo chown -R $(logname):$(logname) vendor/{google_devices,adevtool}
     vendor/adevtool/bin/run ota-firmware vendor/adevtool/config/$device.yml -f vendor/adevtool/dl/$device-ota-$aosp_version-*.zip
     vendor/adevtool/scripts/append-sha256.py vendor/google_devices/$device
-    cp vendor/google_devices/$device/.sha256 $repo_dir/$device.txt
+    cp vendor/google_devices/$device/*.sha256 $repo_dir/$device.txt
 done
 
 cd ${repo_dir}
