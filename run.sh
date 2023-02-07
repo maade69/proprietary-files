@@ -1,6 +1,6 @@
 #!/bin/bash
 set -o errexit
-devices=(flame coral sunfish redfin bramble barbet oriole raven panther cheetah)
+devices=(flame coral sunfish redfin bramble barbet oriole raven bluejay panther cheetah)
 source_dir="$1"
 repo_dir="$(pwd)"
 
